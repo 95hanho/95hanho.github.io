@@ -61,3 +61,7 @@ function portfolioDetail(e) {
     .parents(".portfolio")
     .toggleClass("on");
 }
+// 포트폴리오 이미지 기본없애기
+function portfolioImgClick(e) {
+  e.preventDefault();
+}
