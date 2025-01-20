@@ -35,6 +35,9 @@ a {
   color: rgba(0, 0, 0, 0.85);
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+}
 /* 투명버튼 접근성 고려한 클래스이름 블라인드 */
 .blind {
   display: block;

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* 태블릿용 */
+@media all and (min-width: 768px) {
+  #wrap #mainPage .container {
+    width: 550px;
+    height: 175px;
+  }
+  #wrap #mainPage .container h1 {
+    font-size: 64px;
+  }
+  #wrap #mainPage .container h3 {
+    font-size: 50px;
+  }
+  #wrap main .mainLeft #section4 .container .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #wrap main .mainLeft #section4 .container .content .portfolio {
+    width: 50%;
+  }
+  #wrap main aside #quickMenu .mobile {
+    display: none;
+  }
+  #wrap main aside #quickMenu .pc {
+    display: block;
+  }
+  #wrap footer div {
+    width: 100%;
+  }
+}

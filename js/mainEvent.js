@@ -23,7 +23,7 @@ function scrollTopGo(e) {
   e.preventDefault();
   $("html, body").stop().animate(
     {
-      scrollTop: 0,
+      scrollTop: 0
     },
     500
   );
@@ -35,7 +35,7 @@ function quickGo(e, menuNum) {
   if (menuNum === 1) menuTop += 1;
   $("html, body").stop().animate(
     {
-      scrollTop: menuTop,
+      scrollTop: menuTop
     },
     500
   );
@@ -65,3 +65,5 @@ function portfolioDetail(e) {
 function portfolioImgClick(e) {
   e.preventDefault();
 }
+// 포트폴리오 상세보기 버튼
+function portfolioDetail() {}

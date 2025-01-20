@@ -1,0 +1,47 @@
+/* 태블릿용 */
+@media all and (min-width: 768px) {
+  #wrap {
+    #mainPage {
+      .container {
+        width: 550px;
+        height: 175px;
+        h1 {
+          font-size: 64px;
+        }
+        h3 {
+          font-size: 50px;
+        }
+      }
+    }
+    main {
+      .mainLeft {
+        #section4 {
+          .container {
+            .content {
+              display: flex;
+              flex-wrap: wrap;
+              .portfolio {
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+      aside {
+        #quickMenu {
+          .mobile {
+            display: none;
+          }
+          .pc {
+            display: block;
+          }
+        }
+      }
+    }
+    footer {
+      div {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -267,7 +267,7 @@
             width: 100%;
             .portfolio {
               width: 100%;
-              padding: 10px 0;
+              padding: 10px 5px;
               position: relative;
               a {
                 width: 100%;
@@ -597,6 +597,34 @@
       }
     }
   }
+  // 포트폴리오 팝업
+  #portfolioPopup {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    // display: none;
+    .popup-back {
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    .popup-wrap {
+      background-color: #fff;
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      padding: 0 10px;
+      h4 {
+        padding: 10px;
+        font-weight: bold;
+      }
+    }
+  }
   footer {
     display: flex;
     flex-wrap: wrap;
@@ -625,138 +653,6 @@
         border-bottom: 1px solid white;
       }
       &:last-of-type {
-      }
-    }
-  }
-}
-/* 태블릿용 */
-@media all and (min-width: 768px) {
-  #wrap {
-    #mainPage {
-      .container {
-        width: 550px;
-        height: 175px;
-        h1 {
-          font-size: 64px;
-        }
-        h3 {
-          font-size: 50px;
-        }
-      }
-    }
-    main {
-      .mainLeft {
-        #section4 {
-          .container {
-            .content {
-              display: flex;
-              flex-wrap: wrap;
-              .portfolio {
-                width: 50%;
-              }
-            }
-          }
-        }
-      }
-      aside {
-        #quickMenu {
-          .mobile {
-            display: none;
-          }
-          .pc {
-            display: block;
-          }
-        }
-      }
-    }
-    footer {
-      div {
-        width: 100%;
-      }
-    }
-  }
-}
-/* PC용 CSS */
-@media all and (min-width: 1024px) {
-  #wrap {
-    #mainPage {
-    }
-    main {
-      .mainLeft {
-        #section1 {
-          .container {
-            > .content {
-              display: flex;
-              .profileImg {
-                width: 50%;
-                padding: 0 15px 0 15px;
-                text-align: left;
-                img {
-                  width: 100%;
-                  min-width: 321px;
-                  height: auto;
-                }
-              }
-            }
-            ul {
-              padding: 0 0 0 15px;
-            }
-          }
-        }
-        #section2 {
-          .container {
-            .content {
-              width: 100%;
-              display: flex;
-              > ul {
-                width: 50%;
-                > li {
-                }
-              }
-            }
-            hr {
-              display: block;
-            }
-          }
-        }
-        #section4 {
-          .container {
-            .ps {
-            }
-            .content {
-              .portfolio {
-                width: 33.3333%;
-              }
-            }
-          }
-        }
-        #section5 {
-          .container {
-            .content {
-              .skill {
-                width: 33.333%;
-              }
-            }
-          }
-        }
-      }
-      aside {
-        #quickMenu {
-          .mobile {
-          }
-          .pc {
-          }
-        }
-      }
-    }
-    footer {
-      height: 200px;
-      div {
-        width: 50%;
-        &:first-of-type {
-          border-bottom: 0px;
-          border-right: 1px solid white;
-        }
       }
     }
   }
