@@ -30,8 +30,19 @@
   #wrap main .mainLeft #section4 .container .content .portfolio {
     width: 33.3333%;
   }
-  #wrap main .mainLeft #section5 .container .content .skill {
-    width: 33.333%;
+  #wrap main .mainLeft #section5 .container .content .skill h4 {
+    margin-bottom: 25px;
+  }
+  #wrap main .mainLeft #section5 .container .content .skill .skill-level > div {
+    padding-bottom: 5px;
+  }
+  #wrap main .mainLeft #section5 .container .content .skill .skill-level > div > p {
+    display: inline-block;
+    width: 40%;
+  }
+  #wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress {
+    width: calc(60% - 20px);
+    display: inline-flex;
   }
   #wrap footer {
     height: 200px;

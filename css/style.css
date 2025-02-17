@@ -216,7 +216,21 @@
   margin: 1px 0;
 }
 #wrap main .mainLeft #section4 .container h3 {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+}
+#wrap main .mainLeft #section4 .container .notion-move {
+  display: block;
+  width: 100%;
+  background-color: #668dcc;
+  padding: 20px 20px 10px 10px;
+  text-align: right;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
+}
+#wrap main .mainLeft #section4 .container .notion-move:hover {
+  text-decoration: underline;
 }
 #wrap main .mainLeft #section4 .container h4 {
   margin: 0;
@@ -311,17 +325,19 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  /* gap: 10px; */
+  gap: 10px;
 }
 #wrap main .mainLeft #section5 .container .content .skill {
-  width: 50%;
+  width: 100%;
 }
 #wrap main .mainLeft #section5 .container .content .skill .icon {
   float: left;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 40px;
+  height: 40px;
   background: black;
   border-radius: 50%;
   transition: 0.5s;
@@ -338,15 +354,79 @@
   color: black;
 }
 #wrap main .mainLeft #section5 .container .content .skill h4 {
-  margin-left: 80px;
+  margin-left: 50px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
-#wrap main .mainLeft #section5 .container .content .skill p {
-  margin-left: 80px;
-  line-height: 24px;
-  font-size: 14px;
+#wrap main .mainLeft #section5 .container .content .skill .skill-level {
+  padding: 0 10px;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar {
+  background-color: #aaa;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-0per {
+  background-color: #95b9f3;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-5per {
+  background-color: #8bb4f5;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-10per {
+  background-color: #7dabf5;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-15per {
+  background-color: #70a2f3;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-20per {
+  background-color: #679df3;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-25per {
+  background-color: #5d96f3;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-30per {
+  background-color: #5490f0;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-35per {
+  background-color: #4b8aee;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-40per {
+  background-color: #4484ec;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-45per {
+  background-color: #3e80eb;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-50per {
+  background-color: #377be7;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-55per {
+  background-color: #3276e4;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-60per {
+  background-color: #2e74e4;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-65per {
+  background-color: #2970e2;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-70per {
+  background-color: #276fe4;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-75per {
+  background-color: #226ce2;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-80per {
+  background-color: #1b67e2;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-85per {
+  background-color: #1663e0;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-90per {
+  background-color: #0f60e0;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-95per {
+  background-color: #095ce0;
+}
+#wrap main .mainLeft #section5 .container .content .skill .skill-level > div .progress-bar.level-100per {
+  background-color: #0055dd;
 }
 #wrap main aside {
   height: 100%;
@@ -494,7 +574,7 @@
   color: yellow;
 }
 #wrap main aside #quickMenu .pc .container .topMenu .intro p.email {
-  font-size: 18px;
+  font-size: 16px;
 }
 #wrap main aside #quickMenu .pc .container .quickMenu {
   width: 100%;

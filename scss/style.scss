@@ -1,659 +1,739 @@
 /* 모바일용 */
 #wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  /* 메인페이지 */
-  #mainPage {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    background: url("../img/codeReview.jpg") no-repeat fixed;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .container {
-      text-align: center;
-      // background: red;
-      width: 300px;
-      height: 175px;
-      color: #fff;
-      h1 {
-        font-weight: 700;
-      }
-      h2 {
-        span {
-          &:first-child {
-            padding-bottom: 4px;
-            letter-spacing: 1px;
-            border-bottom: 3px solid #149ddd;
-          }
-          &:last-child {
-            animation: blinkCursor 0.7s infinite;
-          }
-        }
-        @keyframes blinkCursor {
-          0% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-          }
-        }
-      }
-      h3 {
-        font-size: 30px;
-        a {
-          display: inline-block;
-          width: 100%;
-          color: #fff;
-        }
-        &:hover {
-          background: rgb(256, 256, 256, 0.5);
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  main {
-    width: 100%;
-    padding: 0 8px;
-    margin: 0 auto;
-    max-width: 1200px;
-    position: relative;
-    // mobile : 전체
-    // PC : 왼쪽 메인
-    .mainLeft {
-      width: 100%;
-      position: relative;
-      z-index: 5;
-      section {
-        width: 100%;
-        padding: 16px 0 8px 0;
-        .container {
-          width: 100%;
-          padding: 0 15px 30px 15px;
-          background: rgb(255, 255, 255);
-          box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%),
-            0 4px 20px 0 rgb(0 0 0 / 19%);
-          h2 {
-            padding: 20px 10px 0px 10px;
-            margin: 0;
-            position: relative;
-            font-weight: 800;
-            color: darkslategray;
-            &::after {
-              content: "";
-              position: absolute;
-              display: block;
-              width: 100px;
-              height: 3px;
-              margin-left: 70px;
-              background: darkgrey;
-              bottom: 0;
-              left: 0;
-            }
-          }
-          h3 {
-            font-size: 17px;
-            font-weight: 600;
-            margin-left: 70px;
-            color: #999;
-          }
-        }
-      }
-      // 자기소개
-      #section1 {
-        .container {
-          .content {
-            width: 100%;
-            .profileImg {
-              width: 100%;
-              img {
-                width: 80%;
-                height: auto;
-              }
-            }
-            ul {
-              padding: 15px 0 0 0;
-              color: #272829;
-              .mName {
-                padding: 0 0 10px 0;
-                font-weight: 700;
-                font-size: 26px;
-                color: lightslategray;
-              }
-              .sub {
-                padding: 0 0 10px 0;
-              }
-              .intro {
-                a {
-                  font-weight: 900;
-                  color: royalblue;
-                  text-decoration: underline;
-                }
-              }
-              li {
-                > i {
-                  font-size: 20px;
-                  padding-right: 2px;
-                }
-                > strong {
-                  font-weight: bolder;
-                }
-                &:nth-child(n + 3) {
-                  padding: 0 0 5px 0;
-                }
-              }
-            }
-          }
-          .intro-detail {
-            display: none;
-            width: 100%;
-            h4 {
-              font-weight: bold;
-              font-size: 26px;
-            }
-            .content {
-              width: 100%;
-              padding: 10px 20px 10px 20px;
-              border-top: 3px solid black;
-              border-bottom: 3px solid black;
-              border-left: 0.5px solid lightgray;
-              border-right: 0.5px solid lightgray;
-            }
-          }
-        }
-      }
-      // 학력, 교육, 자격증
-      #section2 {
-        .container {
-          h2 {
-            font-size: 25px;
-          }
-          .content {
-            width: 100%;
-            padding: 5px 0 0 15px;
-            &:last-child {
-              padding: 0 0 0 15px;
-            }
-            > ul {
-              width: 100%;
-              > li {
-                width: 100%;
-                padding: 0 0 20px 20px;
-                margin-top: -2px;
-                border-left: 2px solid #777;
-                position: relative;
-                &::before {
-                  content: "";
-                  position: absolute;
-                  width: 16px;
-                  height: 16px;
-                  border-radius: 50px;
-                  left: -9px;
-                  top: 0;
-                  background: #fff;
-                  border: 2px solid #777;
-                }
-                h4 {
-                  margin: 0;
-                  line-height: 18px;
-                  font-size: 18px;
-                  font-weight: 600;
-                  text-transform: uppercase;
-                  color: #050d18;
-                  margin-bottom: 10px;
-                }
-                h5 {
-                  margin: 0;
-                  font-size: 16px;
-                  background: #e4edf9;
-                  padding: 5px 15px;
-                  display: inline-block;
-                  font-weight: 600;
-                  margin-bottom: 10px;
-                }
-                > ul {
-                  > li {
-                    list-style: inside;
-                  }
-                }
-              }
-            }
-          }
-          hr {
-            display: none;
-          }
-        }
-      }
-      // 경력
-      #section3 {
-        .container {
-          ul {
-            padding: 0 0 0 10px;
-            li {
-              list-style: circle;
-              margin: 1px 0;
-            }
-          }
-        }
-      }
-      // 포트폴리오
-      #section4 {
-        .container {
-          h3 {
-            margin-bottom: 0;
-          }
-          h4 {
-            margin: 0;
-            margin-left: 70px;
-            text-align: right;
-            a {
-              font-size: 15px;
-              font-weight: 900;
-              color: royalblue;
-              text-decoration: underline;
-            }
-          }
-          .ps {
-            font-size: 12px;
-            font-weight: 1000;
-            margin-left: 70px;
-            color: rgb(240, 63, 64);
-          }
-          .content {
-            width: 100%;
-            .portfolio {
-              width: 100%;
-              padding: 10px 5px;
-              position: relative;
-              a {
-                width: 100%;
-                img {
-                  width: 100%;
-                }
-              }
-              > a {
-                cursor: default;
-              }
-              h5 {
-                width: 100%;
-                font-size: 1.15rem;
-                display: flex;
-                a {
-                  font-weight: 700;
-                  &:first-child {
-                    color: #149ddd;
-                    text-align: left;
-                  }
-                  &:nth-child(2) {
-                    color: rgb(240, 63, 64);
-                    text-align: right;
-                  }
-                  &:hover {
-                    text-decoration: underline;
-                  }
-                }
-              }
-              h6 {
-                font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-                font-weight: 500;
-                line-height: 1.2;
-              }
-              p {
-                b {
-                  font-size: 15px;
-                }
-                label {
-                  color: red;
-                  font-size: 12px;
-                }
-              }
-              .detail {
-                width: 100%;
-                position: absolute;
-                bottom: 0;
-                background: rgb(255, 255, 255);
-                font-size: 20px;
-                font-weight: 900;
-                a {
-                  color: rgb(65, 105, 225);
-                  text-decoration: underline;
-                }
-              }
-              &.on {
-                height: auto;
-                overflow: visible;
-                .detail {
-                  text-align: right;
-                  position: relative;
-                  a {
-                    color: rgb(240, 63, 64);
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      // 스킬
-      #section5 {
-        .container {
-          .content {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            .skill {
-              width: 50%;
-              .icon {
-                float: left;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 54px;
-                height: 54px;
-                background: black;
-                border-radius: 50%;
-                transition: 0.5s;
-                border: 1px solid #999;
-                i {
-                  color: #fff;
-                  font-size: 24px;
-                }
-              }
-              &.on .icon {
-                background: #fff;
-                i {
-                  color: black;
-                }
-              }
-              h4 {
-                margin-left: 80px;
-                font-weight: 700;
-                margin-bottom: 15px;
-                font-size: 18px;
-              }
-              p {
-                margin-left: 80px;
-                line-height: 24px;
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-    }
-    // mobile : 오른쪽 작은 퀵메뉴
-    // pc : 오른쪽 메인
-    aside {
-      height: 100%;
-      top: 100%;
-      right: 0;
-      #quickMenu {
-        .mobile {
-          display: flex;
-          align-items: center;
-          position: absolute;
-          z-index: 10;
-          width: 40px;
-          height: 100%;
-          right: 0;
-          bottom: 0;
-          button {
-            display: none;
-            width: 100%;
-            position: absolute;
-            cursor: pointer;
-            height: 45px;
-            background: #3d3d3d;
-            border-radius: 3px;
-            border: none;
-            i {
-              font-size: 45px;
-              color: #fff;
-            }
-          }
-          .menuBar {
-            width: 100%;
-            height: 230px;
-            position: relative;
-            background: #3d3d3d;
-            padding: 10px 0;
-            border-radius: 10px;
-            text-align: center;
-            .title {
-              font-size: 13px;
-              color: yellow;
-              line-height: 0.3;
-              height: 13px;
-            }
-            hr {
-              margin: 5px 0;
-            }
-            div {
-              &:nth-child(n + 2) {
-                width: 100%;
-                height: 30px;
-                a {
-                  i {
-                    color: white;
-                    font-size: 20.5px;
-                  }
-                  &.on i {
-                    color: yellow;
-                  }
-                  &.ho i {
-                    color: yellow;
-                  }
-                }
-              }
-            }
-            div.close {
-              position: absolute;
-              bottom: 0;
-              a {
-                border-radius: 50%;
-                background-color: white;
-                i {
-                  color: black;
-                  font-size: 17px;
-                }
-                &:hover,
-                i:hover {
-                  color: red;
-                }
-              }
-            }
-          }
-          .scrTopBtn {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 50px;
-            i {
-              font-size: 2.7rem;
-            }
-          }
-        }
-        .pc {
-          display: none;
-          position: absolute;
-          width: 300px;
-          height: 100%;
-          z-index: 5;
-          right: 0;
-          bottom: 0;
-          padding: 16px 0 24px 8px;
-          .container {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background: #333;
-            box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%),
-              0 4px 20px 0 rgb(0 0 0 / 19%);
-            .topMenu {
-              width: 100%;
-              .intro {
-                width: 100%;
-                padding: 20px 20px 10px 20px;
-                h2 {
-                  padding: 0 0 10px 0;
-                  text-align: center;
-                  margin: 0 0 10px 0;
-                  position: relative;
-                  font-weight: 800;
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    width: 206.4px;
-                    height: 3px;
-                    margin-left: 22.2px;
-                    background: darkgrey;
-                    bottom: 0;
-                    left: 0;
-                  }
-                  a {
-                    color: #fff;
-                    &:hover {
-                      color: lightblue;
-                    }
-                  }
-                }
-                p {
-                  font-size: 20px;
-                  padding: 5px 0;
-                  color: #fff;
-                  i {
-                    font-size: 25px;
-                  }
-                  &:hover {
-                    color: yellow;
-                  }
-                }
-                p.email {
-                  font-size: 18px;
-                }
-              }
-            }
-            .quickMenu {
-              width: 100%;
-              color: #fff;
-              padding: 0 20px 10px 20px;
-              hr {
-                margin: 0 0 10px 0;
-              }
-              ul {
-                width: 100%;
-                li {
-                  padding: 5px 0;
-                  a {
-                    width: 100%;
-                    display: inline-block;
-                    font-size: 20px;
-                    color: #fff;
-                    font-weight: 800;
-                    i {
-                      font-size: 25px;
-                    }
-                    &.on {
-                      color: #149ddd;
-                      transform: scale(105%);
-                    }
-                    &.ho {
-                      color: #149ddd;
-                      transform: scale(105%);
-                    }
-                  }
-                }
-              }
-            }
-            .scrTopBtn {
-              position: absolute;
-              bottom: 0;
-              width: 100%;
-              a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                width: 100%;
-                height: 50px;
-                background: gray;
-                text-align: center;
-                font-weight: 900;
-                font-size: 20px;
-                &:hover {
-                  color: yellow;
-                  transform: scale(101%);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  // 포트폴리오 팝업
-  #portfolioPopup {
-    position: fixed;
-    width: 100%;
-    padding: 0;
-    top: 0;
-    left: 0;
-    z-index: 9998;
-    display: flex;
-    justify-content: center;
-    // display: none;
-    .popup-back {
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.2);
-      position: relative;
-    }
-    .popup-wrap {
-      background-color: #fff;
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      padding: 0 10px;
-      h4 {
-        padding: 10px;
-        font-weight: bold;
-      }
-    }
-  }
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 270px;
-    background: #333;
-    h2 {
-      width: 100%;
-      color: #fff;
-    }
-    div {
-      width: 100%;
-      h3 {
-        color: #149ddd;
-      }
-      p {
-        color: #149ddd;
-      }
-      a {
-        color: #149ddd;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-      &:first-of-type {
-        border-bottom: 1px solid white;
-      }
-      &:last-of-type {
-      }
-    }
-  }
+	width: 100%;
+	height: 100%;
+	position: relative;
+	/* 메인페이지 */
+	#mainPage {
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+		background: url("../img/codeReview.jpg") no-repeat fixed;
+		background-size: cover;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.container {
+			text-align: center;
+			// background: red;
+			width: 300px;
+			height: 175px;
+			color: #fff;
+			h1 {
+				font-weight: 700;
+			}
+			h2 {
+				span {
+					&:first-child {
+						padding-bottom: 4px;
+						letter-spacing: 1px;
+						border-bottom: 3px solid #149ddd;
+					}
+					&:last-child {
+						animation: blinkCursor 0.7s infinite;
+					}
+				}
+				@keyframes blinkCursor {
+					0% {
+						opacity: 1;
+					}
+					100% {
+						opacity: 0;
+					}
+				}
+			}
+			h3 {
+				font-size: 30px;
+				a {
+					display: inline-block;
+					width: 100%;
+					color: #fff;
+				}
+				&:hover {
+					background: rgb(256, 256, 256, 0.5);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	main {
+		width: 100%;
+		padding: 0 8px;
+		margin: 0 auto;
+		max-width: 1200px;
+		position: relative;
+		// mobile : 전체
+		// PC : 왼쪽 메인
+		.mainLeft {
+			width: 100%;
+			position: relative;
+			z-index: 5;
+			section {
+				width: 100%;
+				padding: 16px 0 8px 0;
+				.container {
+					width: 100%;
+					padding: 0 15px 30px 15px;
+					background: rgb(255, 255, 255);
+					box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+					h2 {
+						padding: 20px 10px 0px 10px;
+						margin: 0;
+						position: relative;
+						font-weight: 800;
+						color: darkslategray;
+						&::after {
+							content: "";
+							position: absolute;
+							display: block;
+							width: 100px;
+							height: 3px;
+							margin-left: 70px;
+							background: darkgrey;
+							bottom: 0;
+							left: 0;
+						}
+					}
+					h3 {
+						font-size: 17px;
+						font-weight: 600;
+						margin-left: 70px;
+						color: #999;
+					}
+				}
+			}
+			// 자기소개
+			#section1 {
+				.container {
+					.content {
+						width: 100%;
+						.profileImg {
+							width: 100%;
+							img {
+								width: 80%;
+								height: auto;
+							}
+						}
+						ul {
+							padding: 15px 0 0 0;
+							color: #272829;
+							.mName {
+								padding: 0 0 10px 0;
+								font-weight: 700;
+								font-size: 26px;
+								color: lightslategray;
+							}
+							.sub {
+								padding: 0 0 10px 0;
+							}
+							.intro {
+								a {
+									font-weight: 900;
+									color: royalblue;
+									text-decoration: underline;
+								}
+							}
+							li {
+								> i {
+									font-size: 20px;
+									padding-right: 2px;
+								}
+								> strong {
+									font-weight: bolder;
+								}
+								&:nth-child(n + 3) {
+									padding: 0 0 5px 0;
+								}
+							}
+						}
+					}
+					.intro-detail {
+						display: none;
+						width: 100%;
+						h4 {
+							font-weight: bold;
+							font-size: 26px;
+						}
+						.content {
+							width: 100%;
+							padding: 10px 20px 10px 20px;
+							border-top: 3px solid black;
+							border-bottom: 3px solid black;
+							border-left: 0.5px solid lightgray;
+							border-right: 0.5px solid lightgray;
+						}
+					}
+				}
+			}
+			// 학력, 교육, 자격증
+			#section2 {
+				.container {
+					h2 {
+						font-size: 25px;
+					}
+					.content {
+						width: 100%;
+						padding: 5px 0 0 15px;
+						&:last-child {
+							padding: 0 0 0 15px;
+						}
+						> ul {
+							width: 100%;
+							> li {
+								width: 100%;
+								padding: 0 0 20px 20px;
+								margin-top: -2px;
+								border-left: 2px solid #777;
+								position: relative;
+								&::before {
+									content: "";
+									position: absolute;
+									width: 16px;
+									height: 16px;
+									border-radius: 50px;
+									left: -9px;
+									top: 0;
+									background: #fff;
+									border: 2px solid #777;
+								}
+								h4 {
+									margin: 0;
+									line-height: 18px;
+									font-size: 18px;
+									font-weight: 600;
+									text-transform: uppercase;
+									color: #050d18;
+									margin-bottom: 10px;
+								}
+								h5 {
+									margin: 0;
+									font-size: 16px;
+									background: #e4edf9;
+									padding: 5px 15px;
+									display: inline-block;
+									font-weight: 600;
+									margin-bottom: 10px;
+								}
+								> ul {
+									> li {
+										list-style: inside;
+									}
+								}
+							}
+						}
+					}
+					hr {
+						display: none;
+					}
+				}
+			}
+			// 경력
+			#section3 {
+				.container {
+					ul {
+						padding: 0 0 0 10px;
+						li {
+							list-style: circle;
+							margin: 1px 0;
+						}
+					}
+				}
+			}
+			// 포트폴리오
+			#section4 {
+				.container {
+					h3 {
+						margin-bottom: 20px;
+					}
+					.notion-move {
+						display: block;
+						width: 100%;
+						background-color: #668dcc;
+						padding: 20px 20px 10px 10px;
+						text-align: right;
+						border-radius: 5px;
+						color: #fff;
+						font-size: 20px;
+						font-weight: bolder;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					h4 {
+						margin: 0;
+						margin-left: 70px;
+						text-align: right;
+						a {
+							font-size: 15px;
+							font-weight: 900;
+							color: royalblue;
+							text-decoration: underline;
+						}
+					}
+					.ps {
+						font-size: 12px;
+						font-weight: 1000;
+						margin-left: 70px;
+						color: rgb(240, 63, 64);
+					}
+					.content {
+						width: 100%;
+						.portfolio {
+							width: 100%;
+							padding: 10px 5px;
+							position: relative;
+							a {
+								width: 100%;
+								img {
+									width: 100%;
+								}
+							}
+							> a {
+								cursor: default;
+							}
+							h5 {
+								width: 100%;
+								font-size: 1.15rem;
+								display: flex;
+								a {
+									font-weight: 700;
+									&:first-child {
+										color: #149ddd;
+										text-align: left;
+									}
+									&:nth-child(2) {
+										color: rgb(240, 63, 64);
+										text-align: right;
+									}
+									&:hover {
+										text-decoration: underline;
+									}
+								}
+							}
+							h6 {
+								font-size: 1.5rem;
+								margin-bottom: 0.5rem;
+								font-weight: 500;
+								line-height: 1.2;
+							}
+							p {
+								b {
+									font-size: 15px;
+								}
+								label {
+									color: red;
+									font-size: 12px;
+								}
+							}
+							.detail {
+								width: 100%;
+								position: absolute;
+								bottom: 0;
+								background: rgb(255, 255, 255);
+								font-size: 20px;
+								font-weight: 900;
+								a {
+									color: rgb(65, 105, 225);
+									text-decoration: underline;
+								}
+							}
+							&.on {
+								height: auto;
+								overflow: visible;
+								.detail {
+									text-align: right;
+									position: relative;
+									a {
+										color: rgb(240, 63, 64);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			// 스킬
+			#section5 {
+				.container {
+					.content {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+						/* gap: 10px; */
+						gap: 10px;
+						.skill {
+							width: 100%;
+							.icon {
+								float: left;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 40px;
+								height: 40px;
+								background: black;
+								border-radius: 50%;
+								transition: 0.5s;
+								border: 1px solid #999;
+								i {
+									color: #fff;
+									font-size: 24px;
+								}
+							}
+							&.on .icon {
+								background: #fff;
+								i {
+									color: black;
+								}
+							}
+							h4 {
+								margin-left: 50px;
+								font-weight: 700;
+								margin-bottom: 15px;
+								font-size: 18px;
+							}
+							.skill-level {
+								padding: 0 10px;
+								> div {
+									.progress-bar {
+										background-color: #aaa;
+										&.level-0per {
+											background-color: #95b9f3;
+										}
+										&.level-5per {
+											background-color: #8bb4f5;
+										}
+										&.level-10per {
+											background-color: #7dabf5;
+										}
+										&.level-15per {
+											background-color: #70a2f3;
+										}
+										&.level-20per {
+											background-color: #679df3;
+										}
+										&.level-25per {
+											background-color: #5d96f3;
+										}
+										&.level-30per {
+											background-color: #5490f0;
+										}
+										&.level-35per {
+											background-color: #4b8aee;
+										}
+										&.level-40per {
+											background-color: #4484ec;
+										}
+										&.level-45per {
+											background-color: #3e80eb;
+										}
+										&.level-50per {
+											background-color: #377be7;
+										}
+										&.level-55per {
+											background-color: #3276e4;
+										}
+										&.level-60per {
+											background-color: #2e74e4;
+										}
+										&.level-65per {
+											background-color: #2970e2;
+										}
+										&.level-70per {
+											background-color: #276fe4;
+										}
+										&.level-75per {
+											background-color: #226ce2;
+										}
+										&.level-80per {
+											background-color: #1b67e2;
+										}
+										&.level-85per {
+											background-color: #1663e0;
+										}
+										&.level-90per {
+											background-color: #0f60e0;
+										}
+										&.level-95per {
+											background-color: #095ce0;
+										}
+										&.level-100per {
+											background-color: #0055dd;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// mobile : 오른쪽 작은 퀵메뉴
+		// pc : 오른쪽 메인
+		aside {
+			height: 100%;
+			top: 100%;
+			right: 0;
+			#quickMenu {
+				.mobile {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					z-index: 10;
+					width: 40px;
+					height: 100%;
+					right: 0;
+					bottom: 0;
+					button {
+						display: none;
+						width: 100%;
+						position: absolute;
+						cursor: pointer;
+						height: 45px;
+						background: #3d3d3d;
+						border-radius: 3px;
+						border: none;
+						i {
+							font-size: 45px;
+							color: #fff;
+						}
+					}
+					.menuBar {
+						width: 100%;
+						height: 230px;
+						position: relative;
+						background: #3d3d3d;
+						padding: 10px 0;
+						border-radius: 10px;
+						text-align: center;
+						.title {
+							font-size: 13px;
+							color: yellow;
+							line-height: 0.3;
+							height: 13px;
+						}
+						hr {
+							margin: 5px 0;
+						}
+						div {
+							&:nth-child(n + 2) {
+								width: 100%;
+								height: 30px;
+								a {
+									i {
+										color: white;
+										font-size: 20.5px;
+									}
+									&.on i {
+										color: yellow;
+									}
+									&.ho i {
+										color: yellow;
+									}
+								}
+							}
+						}
+						div.close {
+							position: absolute;
+							bottom: 0;
+							a {
+								border-radius: 50%;
+								background-color: white;
+								i {
+									color: black;
+									font-size: 17px;
+								}
+								&:hover,
+								i:hover {
+									color: red;
+								}
+							}
+						}
+					}
+					.scrTopBtn {
+						position: absolute;
+						bottom: 0;
+						width: 100%;
+						height: 50px;
+						i {
+							font-size: 2.7rem;
+						}
+					}
+				}
+				.pc {
+					display: none;
+					position: absolute;
+					width: 300px;
+					height: 100%;
+					z-index: 5;
+					right: 0;
+					bottom: 0;
+					padding: 16px 0 24px 8px;
+					.container {
+						width: 100%;
+						height: 100%;
+						position: relative;
+						background: #333;
+						box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+						.topMenu {
+							width: 100%;
+							.intro {
+								width: 100%;
+								padding: 20px 20px 10px 20px;
+								h2 {
+									padding: 0 0 10px 0;
+									text-align: center;
+									margin: 0 0 10px 0;
+									position: relative;
+									font-weight: 800;
+									&::after {
+										content: "";
+										position: absolute;
+										display: block;
+										width: 206.4px;
+										height: 3px;
+										margin-left: 22.2px;
+										background: darkgrey;
+										bottom: 0;
+										left: 0;
+									}
+									a {
+										color: #fff;
+										&:hover {
+											color: lightblue;
+										}
+									}
+								}
+								p {
+									font-size: 20px;
+									padding: 5px 0;
+									color: #fff;
+									i {
+										font-size: 25px;
+									}
+									&:hover {
+										color: yellow;
+									}
+								}
+								p.email {
+									font-size: 16px;
+								}
+							}
+						}
+						.quickMenu {
+							width: 100%;
+							color: #fff;
+							padding: 0 20px 10px 20px;
+							hr {
+								margin: 0 0 10px 0;
+							}
+							ul {
+								width: 100%;
+								li {
+									padding: 5px 0;
+									a {
+										width: 100%;
+										display: inline-block;
+										font-size: 20px;
+										color: #fff;
+										font-weight: 800;
+										i {
+											font-size: 25px;
+										}
+										&.on {
+											color: #149ddd;
+											transform: scale(105%);
+										}
+										&.ho {
+											color: #149ddd;
+											transform: scale(105%);
+										}
+									}
+								}
+							}
+						}
+						.scrTopBtn {
+							position: absolute;
+							bottom: 0;
+							width: 100%;
+							a {
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								color: #fff;
+								width: 100%;
+								height: 50px;
+								background: gray;
+								text-align: center;
+								font-weight: 900;
+								font-size: 20px;
+								&:hover {
+									color: yellow;
+									transform: scale(101%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// 포트폴리오 팝업
+	#portfolioPopup {
+		position: fixed;
+		width: 100%;
+		padding: 0;
+		top: 0;
+		left: 0;
+		z-index: 9998;
+		display: flex;
+		justify-content: center;
+		// display: none;
+		.popup-back {
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.2);
+			position: relative;
+		}
+		.popup-wrap {
+			background-color: #fff;
+			position: relative;
+			width: 100%;
+			max-width: 800px;
+			padding: 0 10px;
+			h4 {
+				padding: 10px;
+				font-weight: bold;
+			}
+		}
+	}
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 270px;
+		background: #333;
+		h2 {
+			width: 100%;
+			color: #fff;
+		}
+		div {
+			width: 100%;
+			h3 {
+				color: #149ddd;
+			}
+			p {
+				color: #149ddd;
+			}
+			a {
+				color: #149ddd;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			&:first-of-type {
+				border-bottom: 1px solid white;
+			}
+			&:last-of-type {
+			}
+		}
+	}
 }

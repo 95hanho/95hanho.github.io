@@ -18,6 +18,9 @@
   #wrap main .mainLeft #section4 .container .content .portfolio {
     width: 50%;
   }
+  #wrap main .mainLeft #section5 .container .content .skill {
+    width: calc(50% - 10px);
+  }
   #wrap main aside #quickMenu .mobile {
     display: none;
   }
